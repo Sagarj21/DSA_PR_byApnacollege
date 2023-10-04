@@ -6,21 +6,28 @@ public class BasicSorting {
 
 	//bubble sort //O(n^2)
 	public static void bubbleSort(int arr[]) { //O(n^2)
+		boolean swapped;
 		for(int turn=0;turn<arr.length-1;turn++) {
+			swapped=false;
 			for (int j = 0; j < arr.length-1-turn; j++) {
 				//swap
 				if(arr[j]>arr[j+1]) {
 					int temp=arr[j];
 					arr[j]=arr[j+1];
 					arr[j+1]=temp;
-				}
+					swapped = true;
+				} 
 			}
+			// If no two elements were swapped in inner loop, the array is already sorted
+            if (!swapped) {
+                break;
+            } 
 		}
 	}
 	
 	//selection sort  //O(n^2)
 	public static void selectionSort(int arr[]) {
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length-1; i++) {
 			int minPos=i;
 			for(int j=i+1;j<arr.length;j++) {
 				if(arr[minPos]>arr[j]) {
