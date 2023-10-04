@@ -58,7 +58,7 @@ public class BasicSorting {
 		}
 	}
 	
-	//counting sort
+	//counting sort time complexity O(n+k) where k is range of elements
 	public static void  countingSort(int arr[]) {
 		int largest=Integer.MIN_VALUE;
 		for (int i = 0; i < arr.length; i++) {
