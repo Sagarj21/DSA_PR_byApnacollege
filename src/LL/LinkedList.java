@@ -157,7 +157,7 @@ public class LinkedList {
 	//reverse
 	public void reverse(){
 		Node prev=null;
-		Node curr=tail=head;;
+		Node curr=tail=head;
 		Node next;
 		
 		while(curr !=null) {
@@ -385,16 +385,13 @@ public class LinkedList {
 		// TODO Auto-generated method stub
 
 		LinkedList ll=new LinkedList();
-		
 		ll.addFirst(1);
-		ll.addLast(3);
-		ll.addLast(3);
-		ll.addLast(1);
-		ll.addLast(3);
-		ll.addLast(3);
-		ll.addLast(1);
+		ll.addLast(2);
+		
 		ll.printLL();
-		ll.zigZag();
+//		ll.zigZag();
+//		ll.printLL();
+		ll.reverse();
 		ll.printLL();
 	}
 
